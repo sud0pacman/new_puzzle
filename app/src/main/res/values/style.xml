@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="PuzzleButton">
+        <item name="android:layout_height">73dp</item>
+        <item name="android:layout_width">73dp</item>
+        <item name="android:layout_margin">2.5dp</item>
+<!--        <item name="android:text">15</item>-->
+        <item name="android:textColor">#edc193</item>
+        <item name="android:background">@drawable/number_bg</item>
+        <item name="android:textSize">30sp</item>
+        <item name="fontFamily">@font/like2</item>
+    </style>
+
+    <style name="MenuButton">
+        <item name="android:layout_width">240dp</item>
+        <item name="android:layout_height">74dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/test2</item>
+    </style>
+
+</resources>

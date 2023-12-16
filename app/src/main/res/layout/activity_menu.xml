@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    tools:context=".MenuActivity">
+
+    <FrameLayout
+        android:id="@+id/introView"
+        android:layout_width="270dp"
+        android:layout_height="170dp"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/for_text">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/like5"
+            android:text="@string/puzzle15"
+            android:textColor="#fbeaa4"
+            android:textSize="44sp" />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/play_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/newGameBtn"
+            style="@style/MenuButton">
+
+            <TextView
+                style="@style/MenuText"
+                android:text="@string/new_game" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/continueBtn"
+            style="@style/MenuButton">
+
+            <TextView
+                style="@style/MenuText"
+                android:text="@string/menu_continue" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/cancel_btn"
+            style="@style/MenuButton">
+
+            <TextView
+                style="@style/MenuText"
+                android:text="@string/cancel" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/dialogMenuButtonsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:id="@+id/play_btn"
+            style="@style/MenuButton">
+
+            <TextView
+                style="@style/MenuText"
+                android:text="@string/play" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/statisticsBtn"
+            style="@style/MenuButton">
+
+            <TextView
+                style="@style/MenuText"
+                android:text="@string/statistics" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/infoBtn"
+            style="@style/MenuButton">
+
+            <TextView
+                style="@style/MenuText"
+                android:text="@string/info" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/exitBtn"
+            style="@style/MenuButton">
+
+            <TextView
+                style="@style/MenuText"
+                android:text="@string/my_exit" />
+
+        </FrameLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <FrameLayout
+        android:id="@+id/exitScreen"
+        android:layout_width="320dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:background="@drawable/exit_screen1"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/like5"
+            android:text="@string/do_you_want_exit"
+            android:textColor="#fbeaa4"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/yesBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:layout_margin="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/like5"
+            android:text="@string/yes"
+            android:textColor="#fbeaa4"
+            android:textSize="28sp" />
+
+
+        <TextView
+            android:id="@+id/noBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="50dp"
+            android:fontFamily="@font/like5"
+            android:text="@string/no"
+            android:textColor="#fbeaa4"
+            android:textSize="28sp" />
+
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/statisticsScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:background="@drawable/statics_screen1"
+        android:visibility="gone">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_gravity="top|center"
+            android:background="@drawable/pause_desk1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/like4"
+                android:text="@string/top_3"
+                android:textColor="#fbeaa4"
+                android:textSize="28sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <FrameLayout
+            android:id="@+id/statisticsView"
+            android:layout_width="210dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_first_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:fontFamily="@font/like5"
+                android:gravity="start"
+                android:textColor="#953119"
+                android:textSize="30sp"
+                tools:text="@string/_0_steps" />
+
+            <TextView
+                android:id="@+id/tv_second_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/like5"
+                android:textColor="#953119"
+                android:textSize="30sp"
+                tools:text="@string/_0_steps" />
+
+            <TextView
+                android:id="@+id/tv_third_steps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:fontFamily="@font/like5"
+                android:textColor="#953119"
+                android:textSize="30sp"
+                tools:text="@string/_0_steps" />
+
+        </FrameLayout>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_close_statistics"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom|center"
+            android:src="@drawable/cancel" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/infoView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="355dp"
+            android:layout_height="560dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/ramka2"
+            android:paddingHorizontal="25dp"
+            android:paddingTop="44dp"
+            android:paddingBottom="60dp">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/puzzle15_information"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/quitBtn"
+            style="@style/PauseButtons"
+            android:layout_gravity="bottom|center"
+            android:src="@drawable/quit" />
+    </FrameLayout>
+</FrameLayout>

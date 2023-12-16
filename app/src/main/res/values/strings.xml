@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">new puzzle</string>
+    <string name="time">Time</string>
+    <string name="moves">Moves</string>
+    <string name="paused">PAUSED</string>
+    <string name="puzzle15">Puzzle15</string>
+    <string name="menu_continue">Continue</string>
+    <string name="new_game">New Game</string>
+    <string name="options">Options</string>
+    <string name="exit">Exit</string>
+    <string name="info">Info</string>
+    <string name="my_exit">Exit</string>
+    <string name="puzzle15_information">Puzzle15, also known as the 15-puzzle, is a sliding puzzle game played on a square grid with numbered tiles. The objective is to arrange the tiles in numerical order, starting from the top left corner and ending with an empty space in the bottom right corner. Here\'s how to play the Puzzle15 game: Start with a grid of numbered tiles shuffled randomly, except for the empty space which is typically represented by a blank tile. The tiles can be moved horizontally or vertically, but only if there is an empty space adjacent to them. To move a tile, click or slide it into the adjacent empty space. Continue moving the tiles around until you successfully arrange them in numerical order, with the empty space in the bottom right corner. The game\'s difficulty increases as the number of tiles increases. The original 15-puzzle has a 4x4 grid with tiles numbered from 1 to 15 and an empty space. Variations of the game can have different grid sizes and tile arrangements. The challenge of the game lies in finding a strategy to rearrange the tiles by making optimal moves. Sometimes, solving the puzzle requires careful planning and thinking ahead to avoid getting stuck. You can find online versions of the Puzzle15 game or download mobile apps that allow you to play and enjoy it on various devices.\n\n\n\n\n</string>
+    <string name="new_record">New Record</string>
+    <string name="record_is_0">Record is: 0</string>
+    <string name="do_you_want_exit">Do you want exit ?</string>
+    <string name="yes">Yes</string>
+    <string name="statistics">Statistics</string>
+    <string name="no">No</string>
+    <string name="_0_steps">0 steps</string>
+    <string name="top">Top</string>
+    <string name="top_3">Top 3</string>
+    <string name="play">Play</string>
+    <string name="cancel">Cancel</string>
+</resources>
