@@ -195,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
                             chronometer.stop();
 
                             saveRecords.saveMoveCount(counter);
-                            ((TextView) findViewById(R.id.recordText)).setText(String.valueOf(saveRecords.getResults()[0]));
+                            ((TextView) findViewById(R.id.recordText)).setText("Record is: " + saveRecords.getResults()[0]);
 
 
                             findViewById(R.id.container).setVisibility(View.GONE);

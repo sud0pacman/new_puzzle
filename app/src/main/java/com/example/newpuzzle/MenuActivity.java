@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -34,6 +35,8 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        int orientation = getResources().getConfiguration().orientation;
 
         dialogMenuButtonsView = findViewById(R.id.dialogMenuButtonsView);
         playScreen = findViewById(R.id.play_screen);
@@ -67,17 +70,26 @@ public class MenuActivity extends AppCompatActivity {
         myShared = MyShared.getInstance(this);
 //        myShared.cleaner();
 
+        FrameLayout infoBtn = dialogMenuButtonsView.findViewById(R.id.infoBtn);
 
-        findViewById(R.id.infoBtn).setOnClickListener(v -> {
-            findViewById(R.id.introView).setVisibility(View.GONE);
+        infoBtn.setOnClickListener(v -> {
+
+            if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+                // App is in landscape mode
+                findViewById(R.id.introView).setVisibility(View.GONE);
+            }
             findViewById(R.id.infoView).setVisibility(View.VISIBLE);
             dialogMenuButtonsView.setVisibility(View.GONE);
         });
 
 
-
         findViewById(R.id.quitBtn).setOnClickListener(v -> {
-            findViewById(R.id.introView).setVisibility(View.VISIBLE);
+
+            if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+                // App is in landscape mode
+                findViewById(R.id.introView).setVisibility(View.VISIBLE);
+            }
+
             findViewById(R.id.infoView).setVisibility(View.GONE);
             dialogMenuButtonsView.setVisibility(View.VISIBLE);
         });
@@ -93,14 +105,14 @@ public class MenuActivity extends AppCompatActivity {
 
             TextView first = findViewById(R.id.tv_first_step);
             TextView second = findViewById(R.id.tv_second_step);
-            TextView third= findViewById(R.id.tv_third_steps);
+            TextView third = findViewById(R.id.tv_third_steps);
 
             int max = Integer.MAX_VALUE;
 
 //            Toast.makeText(this, Arrays.toString(myShared.getResults()), Toast.LENGTH_SHORT).show();
 
-            first.setText("1) " + (res[2] == max ? "No" : String.valueOf(res[0])));
-            second.setText("2) " + (res[2] == max ? "No" : String.valueOf(res[1])));
+            first.setText("1) " + (res[0] == max ? "No" : String.valueOf(res[0])));
+            second.setText("2) " + (res[1] == max ? "No" : String.valueOf(res[1])));
             third.setText("3) " + (res[2] == max ? "No" : String.valueOf(res[2])));
 
             ImageView closeStatistics = findViewById(R.id.btn_close_statistics);

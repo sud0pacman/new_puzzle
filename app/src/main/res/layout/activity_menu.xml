@@ -7,6 +7,7 @@
     android:background="@drawable/bg1"
     tools:context=".MenuActivity">
 
+
     <FrameLayout
         android:id="@+id/introView"
         android:layout_width="270dp"
@@ -25,7 +26,6 @@
             android:textSize="44sp" />
 
     </FrameLayout>
-
 
     <LinearLayout
         android:id="@+id/play_screen"

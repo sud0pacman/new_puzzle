@@ -49,6 +49,16 @@ class MyShared {
             for (int i = 0; i < 3; i++) {
                 arr[i] = Integer.parseInt(s[i]);
             }
+
+            if (arr[0] == arr[1]) {
+                arr[1] = Integer.MAX_VALUE;
+            }
+            if (arr[1] == arr[2]) {
+                arr[2] = Integer.MAX_VALUE;
+            }
+
+            Arrays.sort(arr);
+
             result = arr;
         } else {
             result[0] = Integer.MAX_VALUE;
